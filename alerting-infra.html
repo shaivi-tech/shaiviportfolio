@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bond Alerting Infrastructure | Shaivi Goel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="icon.png">
+  <style>
+  .slideshow-container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .mySlides {
+    display: none;
+    width: 100%;
+    height: 100%;
+    padding: 3rem 6rem;
+    box-sizing: border-box;
+  }
+  .mySlides img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 20px;
+    color: var(--black);
+    font-weight: bold;
+    font-size: 36px;
+    transition: opacity 0.3s ease;
+    user-select: none;
+    z-index: 100;
+    opacity: 0.3;
+  }
+  .next { right: 1.5rem; }
+  .prev { left: 1.5rem; }
+  .prev:hover, .next:hover { opacity: 1; }
+  .dot-container {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    z-index: 100;
+  }
+  .dot {
+    cursor: pointer;
+    height: 8px;
+    width: 8px;
+    background-color: var(--gray-300);
+    border-radius: 50%;
+    display: inline-block;
+    transition: all 0.3s ease;
+  }
+  .dot.active { background-color: var(--black); transform: scale(1.4); }
+  .dot.small { transform: scale(0.7); opacity: 0.6; }
+  .fade { animation: fade 0.3s; }
+  .brief-link {
+    position: absolute;
+    bottom: 4.75rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #2563eb;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    z-index: 110;
+    transition: opacity 0.2s ease;
+  }
+  .brief-link:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    opacity: 0.8;
+  }
+  @keyframes fade { from {opacity: .5} to {opacity: 1} }
+  @media (max-width: 768px) {
+    .mySlides { padding: 1rem 3rem; }
+    .prev, .next { font-size: 24px; padding: 10px; }
+    .next { right: 0.5rem; }
+    .prev { left: 0.5rem; }
+    .dot-container { bottom: 1rem; }
+    .brief-link { bottom: 3rem; }
+  }
+</style>
+</head>
+<body>
+  <div class="slideshow-container">
+    
+    <div class="mySlides fade"><img src="alert slides/cover.png" alt="Bond Alerting Infrastructure — Cover"></div>
+    <div class="mySlides fade"><img src="alert slides/002.png" alt="Bond Alerting Infrastructure — Slide 002"></div>
+    <div class="mySlides fade"><img src="alert slides/003.png" alt="Bond Alerting Infrastructure — Slide 003"></div>
+    <div class="mySlides fade"><img src="alert slides/004.png" alt="Bond Alerting Infrastructure — Slide 004"></div>
+    <div class="mySlides fade"><img src="alert slides/005.png" alt="Bond Alerting Infrastructure — Slide 005"></div>
+    <div class="mySlides fade"><img src="alert slides/006.png" alt="Bond Alerting Infrastructure — Slide 006"></div>
+    <div class="mySlides fade"><img src="alert slides/007.png" alt="Bond Alerting Infrastructure — Slide 007"></div>
+    <div class="mySlides fade"><img src="alert slides/008.png" alt="Bond Alerting Infrastructure — Slide 008"></div>
+    <div class="mySlides fade"><img src="alert slides/009.png" alt="Bond Alerting Infrastructure — Slide 009"></div>
+    <div class="mySlides fade"><img src="alert slides/011.png" alt="Bond Alerting Infrastructure — Slide 011"></div>
+    <div class="mySlides fade"><img src="alert slides/012.png" alt="Bond Alerting Infrastructure — Slide 012"></div>
+    <div class="mySlides fade"><img src="alert slides/013.png" alt="Bond Alerting Infrastructure — Slide 013"></div>
+    <div class="mySlides fade"><img src="alert slides/014.png" alt="Bond Alerting Infrastructure — Slide 014"></div>
+    <div class="mySlides fade"><img src="alert slides/015.png" alt="Bond Alerting Infrastructure — Slide 015"></div>
+    <div class="mySlides fade"><img src="alert slides/016.png" alt="Bond Alerting Infrastructure — Slide 016"></div>
+    <div class="mySlides fade"><img src="alert slides/017.png" alt="Bond Alerting Infrastructure — Slide 017"></div>
+    <div class="mySlides fade"><img src="alert slides/018.png" alt="Bond Alerting Infrastructure — Slide 018"></div>
+    <div class="mySlides fade"><img src="alert slides/019.png" alt="Bond Alerting Infrastructure — Slide 019"></div>
+    <div class="mySlides fade"><img src="alert slides/020.png" alt="Bond Alerting Infrastructure — Slide 020"></div>
+    <div class="mySlides fade"><img src="alert slides/021.png" alt="Bond Alerting Infrastructure — Slide 021"></div>
+    <div class="mySlides fade"><img src="alert slides/022.png" alt="Bond Alerting Infrastructure — Slide 022"></div>
+    <div class="mySlides fade"><img src="alert slides/023.png" alt="Bond Alerting Infrastructure — Slide 023"></div>
+    <div class="mySlides fade"><img src="alert slides/024.png" alt="Bond Alerting Infrastructure — Slide 024"></div>
+    <div class="mySlides fade"><img src="alert slides/025.png" alt="Bond Alerting Infrastructure — Slide 025"></div>
+    <div class="mySlides fade"><img src="alert slides/026.png" alt="Bond Alerting Infrastructure — Slide 026"></div>
+    <div class="mySlides fade"><img src="alert slides/027.png" alt="Bond Alerting Infrastructure — Slide 027"></div>
+    <div class="mySlides fade"><img src="alert slides/028.png" alt="Bond Alerting Infrastructure — Slide 028"></div>
+    <div class="mySlides fade"><img src="alert slides/029.png" alt="Bond Alerting Infrastructure — Slide 029"></div>
+    <div class="mySlides fade"><img src="alert slides/030.png" alt="Bond Alerting Infrastructure — Slide 030"></div>
+    <div class="mySlides fade"><img src="alert slides/031.png" alt="Bond Alerting Infrastructure — Slide 031"></div>
+    <div class="mySlides fade"><img src="alert slides/032.png" alt="Bond Alerting Infrastructure — Slide 032"></div>
+    <div class="mySlides fade"><img src="alert slides/033.png" alt="Bond Alerting Infrastructure — Slide 033"></div>
+    <div class="mySlides fade"><img src="alert slides/034.png" alt="Bond Alerting Infrastructure — Slide 034"></div>
+    <div class="mySlides fade"><img src="alert slides/035.png" alt="Bond Alerting Infrastructure — Slide 035"></div>
+    <div class="mySlides fade"><img src="alert slides/036.png" alt="Bond Alerting Infrastructure — Slide 036"></div>
+    <div class="mySlides fade"><img src="alert slides/037.png" alt="Bond Alerting Infrastructure — Slide 037"></div>
+    <div class="mySlides fade"><img src="alert slides/038.png" alt="Bond Alerting Infrastructure — Slide 038"></div>
+    <div class="mySlides fade"><img src="alert slides/039.png" alt="Bond Alerting Infrastructure — Slide 039"></div>
+    <div class="mySlides fade"><img src="alert slides/040.png" alt="Bond Alerting Infrastructure — Slide 040"></div>
+    <div class="mySlides fade"><img src="alert slides/041.png" alt="Bond Alerting Infrastructure — Slide 041"></div>
+    <div class="mySlides fade"><img src="alert slides/042.png" alt="Bond Alerting Infrastructure — Slide 042"></div>
+    <div class="mySlides fade"><img src="alert slides/043.png" alt="Bond Alerting Infrastructure — Slide 043"></div>
+    <div class="mySlides fade"><img src="alert slides/044.png" alt="Bond Alerting Infrastructure — Slide 044"></div>
+    <div class="mySlides fade"><img src="alert slides/045.png" alt="Bond Alerting Infrastructure — Slide 045"></div>
+    <div class="mySlides fade"><img src="alert slides/046.png" alt="Bond Alerting Infrastructure — Slide 046"></div>
+    <div class="mySlides fade"><img src="alert slides/047.png" alt="Bond Alerting Infrastructure — Slide 047"></div>
+    <div class="mySlides fade"><img src="alert slides/048.png" alt="Bond Alerting Infrastructure — Slide 048"></div>
+    <div class="mySlides fade"><img src="alert slides/049.png" alt="Bond Alerting Infrastructure — Slide 049"></div>
+    <div class="mySlides fade"><img src="alert slides/050.png" alt="Bond Alerting Infrastructure — Slide 050"></div>
+    <div class="mySlides fade"><img src="alert slides/051.png" alt="Bond Alerting Infrastructure — Slide 051"></div>
+    <div class="mySlides fade"><img src="alert slides/052.png" alt="Bond Alerting Infrastructure — Slide 052"></div>
+    <div class="mySlides fade"><img src="alert slides/053.png" alt="Bond Alerting Infrastructure — Slide 053"></div>
+    <div class="mySlides fade"><img src="alert slides/054.png" alt="Bond Alerting Infrastructure — Slide 054"></div>
+    <div class="mySlides fade"><img src="alert slides/055.png" alt="Bond Alerting Infrastructure — Slide 055"></div>
+    <div class="mySlides fade"><img src="alert slides/056.png" alt="Bond Alerting Infrastructure — Slide 056"></div>
+    <div class="mySlides fade"><img src="alert slides/057.png" alt="Bond Alerting Infrastructure — Slide 057"></div>
+    <div class="mySlides fade"><img src="alert slides/058.png" alt="Bond Alerting Infrastructure — Slide 058"></div>
+    <div class="mySlides fade"><img src="alert slides/059.png" alt="Bond Alerting Infrastructure — Slide 059"></div>
+    <div class="mySlides fade"><img src="alert slides/060.png" alt="Bond Alerting Infrastructure — Slide 060"></div>
+    <div class="mySlides fade"><img src="alert slides/061.png" alt="Bond Alerting Infrastructure — Slide 061"></div>
+    <div class="mySlides fade"><img src="alert slides/062.png" alt="Bond Alerting Infrastructure — Slide 062"></div>
+    <div class="mySlides fade"><img src="alert slides/063.png" alt="Bond Alerting Infrastructure — Slide 063"></div>
+    <div class="mySlides fade"><img src="alert slides/064.png" alt="Bond Alerting Infrastructure — Slide 064"></div>
+    <div class="mySlides fade"><img src="alert slides/065.png" alt="Bond Alerting Infrastructure — Slide 065"></div>
+    <div class="mySlides fade"><img src="alert slides/066.png" alt="Bond Alerting Infrastructure — Slide 066"></div>
+    <div class="mySlides fade"><img src="alert slides/067.png" alt="Bond Alerting Infrastructure — Slide 067"></div>
+    <div class="mySlides fade"><img src="alert slides/068.png" alt="Bond Alerting Infrastructure — Slide 068"></div>
+
+    <a class="prev" onclick="plusSlides(-1)" aria-label="Previous slide">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)" aria-label="Next slide">&#10095;</a>
+    <div class="dot-container" id="dotContainer"></div>
+  </div>
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) { showSlides(slideIndex += n); }
+    function currentSlide(n) { showSlides(slideIndex = n); }
+
+    function showSlides(n) {
+      const slides = document.getElementsByClassName("mySlides");
+      const dotContainer = document.getElementById("dotContainer");
+      if (n > slides.length) slideIndex = 1;
+      if (n < 1) slideIndex = slides.length;
+
+      for (let i = 0; i < slides.length; i++) slides[i].style.display = "none";
+      slides[slideIndex - 1].style.display = "block";
+
+      const totalSlides = slides.length;
+      let startDot = Math.max(1, slideIndex - 2);
+      let endDot = Math.min(totalSlides, startDot + 4);
+      if (endDot - startDot < 4) startDot = Math.max(1, endDot - 4);
+
+      let dotsHTML = "";
+      for (let j = startDot; j <= endDot; j++) {
+        const active = j === slideIndex ? " active" : "";
+        const small = j !== slideIndex && Math.abs(j - slideIndex) >= 2 ? " small" : "";
+        dotsHTML += `<span class="dot${active}${small}" onclick="currentSlide(${j})"></span>`;
+      }
+      dotContainer.innerHTML = dotsHTML;
+    }
+
+    document.addEventListener("keydown", function(e) {
+      if (e.key === "ArrowLeft") plusSlides(-1);
+      else if (e.key === "ArrowRight") plusSlides(1);
+      else if (e.key === "Escape" || e.key === "Backspace") window.location.href = "index.html#works";
+    });
+  </script>
+</body>
+</html>

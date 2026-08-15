@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vikasya — Superadmin &amp; Expert App | Shaivi Goel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="icon.png">
+  <style>
+.vik-slideshow {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+.vik-slide {
+  display: none;
+  width: 100%;
+  height: 100%;
+  padding: 2.25rem 4.5rem;
+  box-sizing: border-box;
+}
+.vik-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+.vik-prev, .vik-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  padding: 18px;
+  color: #111;
+  font-size: 34px;
+  font-weight: 600;
+  user-select: none;
+  z-index: 20;
+  opacity: .25;
+  transition: opacity .2s ease;
+}
+.vik-prev:hover, .vik-next:hover { opacity: .9; }
+.vik-prev { left: .75rem; }
+.vik-next { right: .75rem; }
+.vik-dots {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 9px;
+  z-index: 20;
+}
+.vik-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #d2d2d2;
+  cursor: pointer;
+}
+.vik-dot.active {
+  background: #111;
+  transform: scale(1.35);
+}
+@media (max-width: 768px) {
+  .vik-slide { padding: 1rem 2.5rem; }
+  .vik-prev, .vik-next { font-size: 24px; padding: 8px; }
+}
+</style>
+</head>
+<body>
+  <main class="vik-slideshow">
+    <div class="vik-slide"><img src="vikasya slides/cover vikasya.png" alt="Vikasya project slide 0"></div>
+    <div class="vik-slide"><img src="vikasya slides/1f.png" alt="Vikasya project slide 1"></div>
+    <div class="vik-slide"><img src="vikasya slides/2f.png" alt="Vikasya project slide 2"></div>
+    <div class="vik-slide"><img src="vikasya slides/3f.png" alt="Vikasya project slide 3"></div>
+    <div class="vik-slide"><img src="vikasya slides/4f.png" alt="Vikasya project slide 4"></div>
+    <div class="vik-slide"><img src="vikasya slides/5f.png" alt="Vikasya project slide 5"></div>
+    <div class="vik-slide"><img src="vikasya slides/6f.png" alt="Vikasya project slide 6"></div>
+    <a class="vik-prev" onclick="plusSlides(-1)" aria-label="Previous slide">&#10094;</a>
+    <a class="vik-next" onclick="plusSlides(1)" aria-label="Next slide">&#10095;</a>
+    <div class="vik-dots" id="dots"></div>
+  </main>
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    function plusSlides(n) { showSlides(slideIndex += n); }
+    function currentSlide(n) { showSlides(slideIndex = n); }
+    function showSlides(n) {
+      const slides = document.getElementsByClassName("vik-slide");
+      if (n > slides.length) slideIndex = 1;
+      if (n < 1) slideIndex = slides.length;
+      for (let i=0; i<slides.length; i++) slides[i].style.display = "none";
+      slides[slideIndex-1].style.display = "block";
+      const dots = document.getElementById("dots");
+      dots.innerHTML = "";
+      for (let i=1; i<=slides.length; i++) {
+        const d = document.createElement("span");
+        d.className = "vik-dot" + (i === slideIndex ? " active" : "");
+        d.onclick = () => currentSlide(i);
+        dots.appendChild(d);
+      }
+    }
+    document.addEventListener("keydown", function(e) {
+      if (e.key === "ArrowLeft") plusSlides(-1);
+      if (e.key === "ArrowRight") plusSlides(1);
+      if (e.key === "Escape" || e.key === "Backspace") window.location.href = "index.html#works";
+    });
+  </script>
+</body>
+</html>
